@@ -17,27 +17,33 @@ struct HomeView: View {
                         ProgressView()
                     }
                     Text("\(viewModel.images.count)").padding(.leading, 16)
+                        .accessibilityIdentifier(Accessibility.Home.amount)
                 }
                 ZStack {
                     List {
-                        ForEach(viewModel.images, id: \.url) { image in
-                            NavigationLink(
-                                destination: DogDetailsView(
-                                    viewModel: DogDetailsViewModel(
-                                        id: image.id,
-                                        repository: viewModel.repository
+                        Section(
+                            footer: ProgressView()
+                                .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .center)
+                                .listRowSeparator(.hidden).onAppear() {
+                                    viewModel.fetchMore()
+                                }
+                        ) {
+                            ForEach(viewModel.images, id: \.id) { image in
+                                NavigationLink(
+                                    destination: DogDetailsView(
+                                        viewModel: DogDetailsViewModel(
+                                            id: image.id,
+                                            repository: viewModel.repository
+                                        )
                                     )
-                                )
-                            ) {
-                                DogCellView(viewModel: viewModel, image: image)
+                                ) {
+                                    DogCellView(viewModel: viewModel, image: image)
+                                }
+                                .accessibilityIdentifier(Accessibility.Home.cell)
                             }
-                            .accessibilityIdentifier(Accessibility.Home.cell)
                         }
                     }
                     .accessibilityIdentifier(Accessibility.Home.list)
-                    .refreshable {
-                        viewModel.fetchMore()
-                    }
                     .animation(.default, value: viewModel.images.count)
                 }
             }
@@ -45,9 +51,6 @@ struct HomeView: View {
         }
         .padding()
         .errorAlert(error: $viewModel.error)
-        .onAppear {
-            viewModel.fetchMore()
-        }
     }
 }
 

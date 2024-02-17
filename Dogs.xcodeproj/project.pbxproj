@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB00C2592B80F1A10020E227 /* MockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94A5592B7FCBD40056D7A5 /* MockRepository.swift */; };
+		CB00C25A2B80F3760020E227 /* 5TKMTrS09.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB94A5662B7FD0D90056D7A5 /* 5TKMTrS09.jpg */; };
+		CB00C25B2B80F3760020E227 /* 9POof5zD0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB94A5672B7FD0D90056D7A5 /* 9POof5zD0.jpg */; };
+		CB00C25C2B80F3760020E227 /* 38KoA9gGB.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB94A5652B7FD0D90056D7A5 /* 38KoA9gGB.jpg */; };
+		CB00C25D2B80F3760020E227 /* Bk-WET6Em.gif in Resources */ = {isa = PBXBuildFile; fileRef = CB94A5602B7FD0D90056D7A5 /* Bk-WET6Em.gif */; };
+		CB00C25E2B80F3760020E227 /* S1V3Qeq4X_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB94A5642B7FD0D90056D7A5 /* S1V3Qeq4X_1280.jpg */; };
+		CB00C25F2B80F3760020E227 /* Sk67KO2rX_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB94A5682B7FD0D90056D7A5 /* Sk67KO2rX_1280.jpg */; };
+		CB00C2602B80F3760020E227 /* SkRpsgc47_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB94A5612B7FD0D90056D7A5 /* SkRpsgc47_1280.jpg */; };
+		CB00C2612B80F3760020E227 /* SyNNYd3S7_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB94A5622B7FD0D90056D7A5 /* SyNNYd3S7_1280.jpg */; };
+		CB00C2622B80F3760020E227 /* wPIaaiYOy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB94A5632B7FD0D90056D7A5 /* wPIaaiYOy.jpg */; };
+		CB00C2632B80F3760020E227 /* xmHTSrAon_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB94A55F2B7FD0D90056D7A5 /* xmHTSrAon_1280.jpg */; };
 		CB0BEBFA2B7F0B3C00720F41 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0BEBF92B7F0B3C00720F41 /* Repository.swift */; };
 		CB0BEBFE2B7F867F00720F41 /* DogDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0BEBFD2B7F867F00720F41 /* DogDetailsViewModelTests.swift */; };
 		CB0BEC002B7F868A00720F41 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0BEBFF2B7F868A00720F41 /* HomeViewModelTests.swift */; };
@@ -24,7 +35,6 @@
 		CB799E362B7ED91600DB639B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB799E352B7ED91600DB639B /* Errors.swift */; };
 		CB94A5552B7FC4660056D7A5 /* DogImages.json in Resources */ = {isa = PBXBuildFile; fileRef = CB94A5542B7FC4660056D7A5 /* DogImages.json */; };
 		CB94A5582B7FCA430056D7A5 /* InvalidDogImages.json in Resources */ = {isa = PBXBuildFile; fileRef = CB94A5572B7FCA430056D7A5 /* InvalidDogImages.json */; };
-		CB94A55A2B7FCBD40056D7A5 /* MockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94A5592B7FCBD40056D7A5 /* MockRepository.swift */; };
 		CB94A55D2B7FCCA90056D7A5 /* InvalidDogDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = CB94A55B2B7FCCA90056D7A5 /* InvalidDogDetails.json */; };
 		CB94A55E2B7FCCAA0056D7A5 /* DogDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = CB94A55C2B7FCCA90056D7A5 /* DogDetails.json */; };
 		CB94A5692B7FD0D90056D7A5 /* xmHTSrAon_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB94A55F2B7FD0D90056D7A5 /* xmHTSrAon_1280.jpg */; };
@@ -142,7 +152,7 @@
 			path = DetailsView;
 			sourceTree = "<group>";
 		};
-		CB94A5562B7FC4CB0056D7A5 /* Images */ = {
+		CB94A5562B7FC4CB0056D7A5 /* TestImages */ = {
 			isa = PBXGroup;
 			children = (
 				CB94A5662B7FD0D90056D7A5 /* 5TKMTrS09.jpg */,
@@ -156,7 +166,7 @@
 				CB94A5632B7FD0D90056D7A5 /* wPIaaiYOy.jpg */,
 				CB94A55F2B7FD0D90056D7A5 /* xmHTSrAon_1280.jpg */,
 			);
-			path = Images;
+			path = TestImages;
 			sourceTree = "<group>";
 		};
 		CBB15C102B7969CE00B1F9CC = {
@@ -190,11 +200,12 @@
 				CB799E242B7E5F8500DB639B /* ImageFetcher.swift */,
 				CB799E312B7EA66D00DB639B /* CachedAsyncImage.swift */,
 				CB799E332B7ED7FD00DB639B /* API.swift */,
+				CB94A5592B7FCBD40056D7A5 /* MockRepository.swift */,
 				CB0BEC052B7F878500720F41 /* Accessibility.swift */,
 				CB0BEBF92B7F0B3C00720F41 /* Repository.swift */,
-				CB94A5592B7FCBD40056D7A5 /* MockRepository.swift */,
 				CB799E352B7ED91600DB639B /* Errors.swift */,
 				CBE2BAAB2B7D42B6000F939D /* Splash.storyboard */,
+				CB94A5562B7FC4CB0056D7A5 /* TestImages */,
 				CBE2BAC52B7D7556000F939D /* Preview Content */,
 			);
 			path = Dogs;
@@ -208,7 +219,6 @@
 				CB94A55C2B7FCCA90056D7A5 /* DogDetails.json */,
 				CB94A55B2B7FCCA90056D7A5 /* InvalidDogDetails.json */,
 				CB0BEBFD2B7F867F00720F41 /* DogDetailsViewModelTests.swift */,
-				CB94A5562B7FC4CB0056D7A5 /* Images */,
 				CB0BEBFF2B7F868A00720F41 /* HomeViewModelTests.swift */,
 				CB0BEC012B7F86C900720F41 /* ImageFetcherTests.swift */,
 				CB0BEC032B7F86FA00720F41 /* RepositoryTests.swift */,
@@ -356,6 +366,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB00C25A2B80F3760020E227 /* 5TKMTrS09.jpg in Resources */,
+				CB00C25B2B80F3760020E227 /* 9POof5zD0.jpg in Resources */,
+				CB00C25C2B80F3760020E227 /* 38KoA9gGB.jpg in Resources */,
+				CB00C25D2B80F3760020E227 /* Bk-WET6Em.gif in Resources */,
+				CB00C25E2B80F3760020E227 /* S1V3Qeq4X_1280.jpg in Resources */,
+				CB00C25F2B80F3760020E227 /* Sk67KO2rX_1280.jpg in Resources */,
+				CB00C2602B80F3760020E227 /* SkRpsgc47_1280.jpg in Resources */,
+				CB00C2612B80F3760020E227 /* SyNNYd3S7_1280.jpg in Resources */,
+				CB00C2622B80F3760020E227 /* wPIaaiYOy.jpg in Resources */,
+				CB00C2632B80F3760020E227 /* xmHTSrAon_1280.jpg in Resources */,
 				CBE2BAAC2B7D42B6000F939D /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,7 +422,7 @@
 				CBB15C1F2B7969CE00B1F9CC /* HomeView.swift in Sources */,
 				CB799E2B2B7E673100DB639B /* DogDetails.swift in Sources */,
 				CB799E2F2B7E69EB00DB639B /* Measure.swift in Sources */,
-				CB94A55A2B7FCBD40056D7A5 /* MockRepository.swift in Sources */,
+				CB00C2592B80F1A10020E227 /* MockRepository.swift in Sources */,
 				CB799E342B7ED7FD00DB639B /* API.swift in Sources */,
 				CB799E292B7E666C00DB639B /* DogDetailsViewModel.swift in Sources */,
 				CB799E252B7E5F8500DB639B /* ImageFetcher.swift in Sources */,

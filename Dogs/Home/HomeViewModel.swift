@@ -38,7 +38,7 @@ class HomeViewModel: ObservableObject {
                 ])
 
                 let images = try await repository.fetchDogImages(from: url)
-                self.images.insert(contentsOf: images, at: 0)
+                self.images.append(contentsOf: images)
                 self.fetching = false
             } catch {
                 self.error = error
