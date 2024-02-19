@@ -45,7 +45,7 @@ final class ImageFetcherTests: XCTestCase {
             try await imageFetcher?.get(from: $0)
         }
 
-        let cached = await imageFetcher?.cached
+        let cached = await imageFetcher?.cache
 
         XCTAssertEqual(images.count, 20)
         XCTAssertEqual(cached?.count, 10)

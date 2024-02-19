@@ -8,8 +8,7 @@ actor ImageFetcher {
 
     static var shared = ImageFetcher()
 
-    var cached: [URL: Image] { cache }
-    private var cache: [URL: Image] = [:]
+    private(set) var cache: [URL: Image] = [:]
 
     func get(from url: URL) async throws -> Image? {
         if let image = cache[url] {
