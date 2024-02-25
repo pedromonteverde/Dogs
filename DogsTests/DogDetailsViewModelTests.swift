@@ -26,10 +26,8 @@ final class DogDetailsViewModelTests: XCTestCase {
 
         viewModel?.$url.sink { [weak self] url in
             guard let self else { return }
-            if let url {
-                XCTAssertNil(viewModel?.error)
-                expectation.fulfill()
-            }
+            XCTAssertNil(self.viewModel?.error)
+            expectation.fulfill()
         }
         .store(in: &cancellables)
 

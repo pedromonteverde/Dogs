@@ -30,10 +30,11 @@ class DogDetailsViewModel: ObservableObject {
 
     func fetch() {
 
-        Task { @MainActor in
+        Task { @MainActor [weak self] in
+            guard let self else { return }
             do {
-                guard var url = URL(string: API.baseURL + id) else {
-                    error = FetchingError.invalidURL
+                guard var url = URL(string: API.baseURL + self.id) else {
+                    self.error = FetchingError.invalidURL
                     return
                 }
 

@@ -75,7 +75,7 @@ final class RepositoryTests: XCTestCase {
         let url = try XCTUnwrap(bundle.url(forResource: "DogDetails", withExtension: "json"))
         do {
             let dogDetails = try await repository?.fetchDogDetails(from: url)
-            XCTAssert(true)
+            XCTAssertNotNil(dogDetails)
         } catch {
             XCTFail(error.localizedDescription)
         }

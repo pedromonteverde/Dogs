@@ -143,13 +143,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CB799E302B7E6A0400DB639B /* DetailsView */ = {
+		CB799E302B7E6A0400DB639B /* Details */ = {
 			isa = PBXGroup;
 			children = (
 				CB799E222B7E5E4300DB639B /* DogDetailsView.swift */,
 				CB799E282B7E666C00DB639B /* DogDetailsViewModel.swift */,
 			);
-			path = DetailsView;
+			path = Details;
 			sourceTree = "<group>";
 		};
 		CB94A5562B7FC4CB0056D7A5 /* TestImages */ = {
@@ -193,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				CBE2BAA42B7D3732000F939D /* Home */,
-				CB799E302B7E6A0400DB639B /* DetailsView */,
+				CB799E302B7E6A0400DB639B /* Details */,
 				CBE2BABF2B7D6816000F939D /* Models */,
 				CBB15C1C2B7969CE00B1F9CC /* DogsApp.swift */,
 				CBAB7E262B7BC98500A0E802 /* Extensions.swift */,

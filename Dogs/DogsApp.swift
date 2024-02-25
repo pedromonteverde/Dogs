@@ -20,11 +20,8 @@ struct SceneLauncher: View {
 
     var body: some View {
         if isNotUnitTesting {
-            if isUITesting {
-                HomeView(viewModel: HomeViewModel(repository: MockRepository()))
-            } else {
-                HomeView(viewModel: HomeViewModel(repository: DefaultRepository()))
-            }
+            let repository: Repository = isUITesting ? MockRepository() : DefaultRepository()
+            HomeView(viewModel: HomeViewModel(repository: repository))
         }
     }
 }

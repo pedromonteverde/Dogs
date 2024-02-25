@@ -6,7 +6,7 @@ import SwiftUI
 
 struct CachedAsyncImage<Content: View>: View {
 
-    let url: URL
+    let url: URL?
     let content: (Image) -> Content
 
     @State private var phase: Phase = .empty
@@ -31,16 +31,18 @@ struct CachedAsyncImage<Content: View>: View {
                 Image(systemName: "photo")
             }
         }
-        .onAppear {
-            Task {
-                do {
-                    if let image = try await ImageFetcher.shared.get(from: url) {
-                        phase = .success(image)
-                    } else {
-                        phase = .none
+        .onChange(of: url, initial: true) { oldValue, newValue in
+            if let url = newValue {
+                Task {
+                    do {
+                        if let image = try await ImageFetcher.shared.get(from: url) {
+                            phase = .success(image)
+                        } else {
+                            phase = .none
+                        }
+                    } catch {
+                        phase = .failure(error)
                     }
-                } catch {
-                    phase = .failure(error)
                 }
             }
         }
